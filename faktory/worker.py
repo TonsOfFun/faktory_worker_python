@@ -238,7 +238,7 @@ class Worker:
                     self.disconnect(force=True)
 
             # faktory.fetch() blocks for 2s, but if we are not fetching jobs then we need to add a delay or this process will spin
-            time.sleep(0.25)
+            time.sleep(0.001)
 
     def send_status_to_faktory(self):
         for future in self._pending:
